@@ -60,27 +60,34 @@ calcu2();
 
 //tapsyrma 3
 
-let zhasyrynSan = 65;
-let areket = 0;
-let suray = Number(prompt("1 мен 100 дің арасындағы купия санды табыныз:"))
-function shygary(){
-while (true) {
-    if (suray < 1 || suray > 100 ){
-        alert("Qatee 1 мен 100 дің арасындағы санды таңда ")
+function game() {
+  const san = 45;
+  let ZhasyrynSan = +prompt("1 мен 100 дің арасындағы купия санды табыныз");
+
+  while (true) {
+    if (ZhasyrynSan == san) {
+      alert("Жарайсын сен купия санды таптын!");
+    }
+    if (ZhasyrynSan < 0 && 100 > ZhasyrynSan) {
+      alert ("Диапазон арасында жаз 100 - 0")
+      ZhasyrynSan = +prompt("enter num");
+    }
+    if (ZhasyrynSan > 0 && ZhasyrynSan < 40) {
+      alert("Жай жогары");
+      ZhasyrynSan = +prompt("enter num");
+    } else if (ZhasyrynSan > 50 && ZhasyrynSan < 100) {
+      alert("Жай томен ");
+      ZhasyrynSan = +prompt("enter num");
+    } else if (ZhasyrynSan > 40 && ZhasyrynSan < 45 ) {
+      alert("Сәл жогары ");
+      ZhasyrynSan = +prompt("enter num");
+    } else if (ZhasyrynSan > 45 && ZhasyrynSan < 50) {
+      alert("Сәл томен");
+      ZhasyrynSan = +prompt("enter num");
     } 
-    areket++;
+  }
 }
-}
-if (suray > zhasyrynSan) {
-    alert("Сәл жоғары");
-} else if (suray < zhasyrynSan) {
-    alert( "Сәл төмен");
-}else if (suray === zhasyrynSan) {
-    alert("Жарайсын сен купия санды таптын!");
-}
-
-shygary();
-
+console.log(game());
 
 //Bonus task
 let a = 20;
